@@ -15,6 +15,10 @@ As we can see, the polygon number 1 is polygon without spike and the others are 
 Basically, a polygon is formed with number of straight lines, and those lines are formed by number of points.
 I use this basic definition of polygon to develop a program that can detect spikes of any polygon.
 
+The following is the flow diagram of the program, shows the steps or procedure to filter out spikes from polygons
+![Logic Diagram](https://user-images.githubusercontent.com/44993635/79044890-41100780-7c32-11ea-843a-bef71c952700.png)
+
+
 The first step is to extract the polygon data to get the coordinates of all points that form a polygon.
 The next step is to treat the spike point as an outlier of our data set (data points). I use a simple method to filter out an outlier in a data set.
 ![outlier](https://user-images.githubusercontent.com/44993635/79043194-f12c4300-7c27-11ea-8793-18623cce7fed.png)
