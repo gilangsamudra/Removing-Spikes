@@ -51,5 +51,6 @@ data.plot(ax=plt.gca()) # Plot the raw data
 
 fig2 = plt.figure(dpi=200)
 f_data.plot(ax=plt.gca()) # Plot the filtered data
+plt.show()
 
 f_data.to_file("filtered-polygons.shp") # save the filtered data
