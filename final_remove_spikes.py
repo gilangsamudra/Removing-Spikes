@@ -13,7 +13,7 @@ def plot_poly(b):
 # Function to detect outliers in a data set
 def outlier(x, m=2):
     outx = np.abs(x - np.median(x)) < (m * np.std(x))
-    indx = np.asarray(np.where(outx == False))
+    indx = np.asarray(np.where(outx == 0))
     return indx
 
 
@@ -43,14 +43,14 @@ def remove_spike(poly):
 
 
 # Load the raw data
-data = gpd.read_file('D:\KARTOZA\spiky-polygons.gpkg')
-f_data = remove_spike(data) # Call the main function
+data = gpd.read_file('D:/KARTOZA/spiky-polygons.gpkg')
+f_data = remove_spike(data)  # Call the main function
 
 fig1 = plt.figure(dpi=200)
-data.plot(ax=plt.gca()) # Plot the raw data
+data.plot(ax=plt.gca())  # Plot the raw data
 
 fig2 = plt.figure(dpi=200)
-f_data.plot(ax=plt.gca()) # Plot the filtered data
+f_data.plot(ax=plt.gca())  # Plot the filtered data
 plt.show()
 
-f_data.to_file("filtered-polygons.shp") # save the filtered data
+f_data.to_file("filtered-polygons.shp")  # save the filtered data
